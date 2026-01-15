@@ -27,6 +27,10 @@ void CrymiumPlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR 
 		{
 			if (gEnv->IsEditor()) 
 			{
+				if (mEnv->showUIName != "" && mEnv->showUIOnLoadLevel && mEnv->hasShowUI)
+				{
+					mEnv->pContainer->GetUiCloser()->Close();
+				}
 				_crymiumContainer->GetCrymiumInitialiser()->Initialise();
 			}
 		}
@@ -35,7 +39,7 @@ void CrymiumPlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR 
 		{
 			if (gEnv->IsEditor() 
 				&& mEnv->showUIName != "" 
-				&& mEnv->showUIOnLoadLevel)
+				&& mEnv->hasShowUI)
 			{
 				_crymiumContainer->GetCrymiumInitialiser()->Initialise();
 				_crymiumContainer->GetUiActivator()->Activate(mEnv->showUIName);
