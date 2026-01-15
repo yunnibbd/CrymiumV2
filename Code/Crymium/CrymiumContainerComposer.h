@@ -8,7 +8,7 @@ namespace Crymium
 	class CrymiumContainerComposer
 	{
 	public:
-		__declspec(dllexport) static std::unique_ptr<ICrymiumContainer> Compose(std::string uiDirectory = "");
+		__declspec(dllexport) static std::unique_ptr<ICrymiumContainer> Compose(const char* uiDirectory = nullptr);
 	};
 }
 

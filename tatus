@@ -1,0 +1,96 @@
+[33mcommit 760b7836b444d369b90bbd05aa78e8f042d21e6e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Sat Feb 6 19:03:34 2021 +0000
+
+    Change the CEF download URL to the new Spotify CDN location
+
+[33mcommit 15d1c286f6025428d6c86a82033f8dcd3c9e59ee[m
+Author: Jonny <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Sat Jan 30 15:06:37 2021 +0000
+
+    Add additional default Key Code mappings
+
+[33mcommit 58feea0de871bef578a8b496e8aaaf1f1e29251a[m
+Author: Jonny <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Sat Jan 30 13:15:14 2021 +0000
+
+    Add additional Key Codes
+
+[33mcommit 1d30db4c08c18de1fcf10e1730e3cad5bb03ebb1[m
+Merge: efa1191 ee93f10
+Author: Jonny <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Sat Jan 30 11:26:25 2021 +0000
+
+    Merge branch 'main' of https://github.com/JonnyOrman/CRYMIUM
+
+[33mcommit efa1191346932c78fb57689a18f99c76fde5ae02[m
+Author: Jonny <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Sat Jan 30 11:26:10 2021 +0000
+
+    Enable custom input mappings
+
+[33mcommit ee93f1022503e52dd041156cf66efcd36681b34e[m
+Author: Jonathan Orman <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Tue Jan 26 20:43:17 2021 +0000
+
+    Update README.md
+
+[33mcommit 10e969b7afb2573fc9b119282efc254325db34fb[m
+Author: Jonny <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Tue Jan 12 12:06:18 2021 +0000
+
+    Remove custom V8Handler
+
+[33mcommit bf3afbd684f4f9d3208e5133ec729264b9fc54eb[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Tue Jan 12 00:09:38 2021 +0000
+
+    Compose CrymiumContainer on plugin initialisation
+
+[33mcommit 478a6c8b4e4a7d6da8bd51641b4e6f6574e899cd[m
+Author: Jonathan Orman <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Tue Dec 29 02:23:21 2020 +0000
+
+    Create LICENSE
+
+[33mcommit 5754c1e422f9b2ac182a930e8a91dc2915b32993[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Sun Dec 27 19:18:20 2020 +0000
+
+    Remove Angular specific code from JavaScriptFunctionCallBuilder
+
+[33mcommit 2ecaf9a5f6a73f971188d126fab6b255ed02226d[m
+Author: Jonathan Orman <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Thu Dec 24 00:36:04 2020 +0000
+
+    Build, installation and tutorial sections moved from README to wiki
+
+[33mcommit 17630b6caca1a68a90dc203fde6fb68fe01b7041[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Tue Dec 22 15:45:54 2020 +0000
+
+    fix Crymium.UnitTests build
+
+[33mcommit 3e66d6e668d96b7f3a947b61b28e4da1b9056f10[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Tue Dec 22 00:56:12 2020 +0000
+
+    add main menu guide to read me, update header paths
+
+[33mcommit c34725d994cf5f2fdf51799e71c5c81e26e7bd94[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Tue Dec 15 18:07:58 2020 +0000
+
+    Add Crymium.SubProcess
+
+[33mcommit f374435a43b3da6991516c2d8c273a08d0aca81c[m
+Author: Jonny <jonathanpcorman@gmail.com>
+Date:   Fri Oct 16 22:12:54 2020 +0100
+
+    Commit initial CRYMIUM work into git
+
+[33mcommit 6eea9b044fc6f501eea85d4b635b7f52e9b98f08[m
+Author: Jonathan Orman <11491006+JonnyOrman@users.noreply.github.com>
+Date:   Fri Oct 16 11:51:53 2020 +0100
+
+    Initial commit

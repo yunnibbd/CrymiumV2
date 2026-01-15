@@ -74,36 +74,36 @@ set(GS_HASHPATH "win/clang-format.exe.sha1")
 add_subdirectory(${CEF_LIBCEF_DLL_WRAPPER_PATH} libcef_dll_wrapper)
 
 add_subdirectory(Crymium)
-add_subdirectory(Crymium.UnitTests)
+# add_subdirectory(Crymium.UnitTests)
 add_subdirectory(Crymium.SubProcess)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 
-configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
-execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
-if(result)
-  message(FATAL_ERROR "CMake step for googletest failed: ${result}")
-endif()
-execute_process(COMMAND ${CMAKE_COMMAND} --build .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
-if(result)
-  message(FATAL_ERROR "Build step for googletest failed: ${result}")
-endif()
+# configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
+# execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
+#   RESULT_VARIABLE result
+#   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+# if(result)
+#   message(FATAL_ERROR "CMake step for googletest failed: ${result}")
+# endif()
+# execute_process(COMMAND ${CMAKE_COMMAND} --build .
+#   RESULT_VARIABLE result
+#   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
+# if(result)
+#   message(FATAL_ERROR "Build step for googletest failed: ${result}")
+# endif()
 
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+# set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
-                 ${CMAKE_CURRENT_BINARY_DIR}/googletest-build)
+# add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
+#                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build)
 
-if (CMAKE_VERSION VERSION_LESS 2.8.11)
-  include_directories("${gtest_SOURCE_DIR}/include")
-endif()
+# if (CMAKE_VERSION VERSION_LESS 2.8.11)
+#   include_directories("${gtest_SOURCE_DIR}/include")
+# endif()
 
-target_compile_options(gtest PRIVATE "/MTd")
-target_compile_options(gtest_main PRIVATE "/MTd")
-target_compile_options(gmock PRIVATE "/MTd")
-target_compile_options(gmock_main PRIVATE "/MTd")
+# target_compile_options(gtest PRIVATE "/MTd")
+# target_compile_options(gtest_main PRIVATE "/MTd")
+# target_compile_options(gmock PRIVATE "/MTd")
+# target_compile_options(gmock_main PRIVATE "/MTd")

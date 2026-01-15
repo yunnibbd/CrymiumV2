@@ -13,7 +13,9 @@ bool CrymiumPlugin::Initialize(SSystemGlobalEnvironment& env, const SSystemInitP
 	gEnv->pSystem->GetISystemEventDispatcher()->RegisterListener(this, "Crymium");
 
 	_crymiumContainer = CrymiumContainerComposer::Compose();
-	
+
+	mEnv->pContainer = _crymiumContainer.get();
+
 	return true;
 }
 
@@ -21,11 +23,41 @@ void CrymiumPlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR 
 {
 	switch (event)
 	{
+	case ESYSTEM_EVENT_LEVEL_LOAD_START:
+		{
+			if (gEnv->IsEditor()) 
+			{
+				_crymiumContainer->GetCrymiumInitialiser()->Initialise();
+			}
+		}
+		break;
+	case ESYSTEM_EVENT_LEVEL_LOAD_END:
+		{
+			if (gEnv->IsEditor() 
+				&& mEnv->showUIName != "" 
+				&& mEnv->showUIOnLoadLevel)
+			{
+				_crymiumContainer->GetCrymiumInitialiser()->Initialise();
+				_crymiumContainer->GetUiActivator()->Activate(mEnv->showUIName);
+			}
+		}
+		break;
 	case ESYSTEM_EVENT_GAME_POST_INIT:
-	{
-		_crymiumContainer->GetCrymiumInitialiser()->Initialise();
-	}
-	break;
+		{
+			if (!gEnv->IsEditor())
+			{
+				_crymiumContainer->GetCrymiumInitialiser()->Initialise();
+			}
+		}
+		break;
+	case ESYSTEM_EVENT_GAME_MODE_SWITCH_END:
+		{
+			if (gEnv->IsEditor() && mEnv->hasShowUI && !mEnv->showUIOnLoadLevel)
+			{
+				mEnv->pContainer->GetUiCloser()->Close();
+			}
+		}
+		break;
 	}
 }
 

@@ -36,7 +36,7 @@ target_compile_definitions(${THIS_PROJECT} PRIVATE NOT_USE_CRY_MEMORY_MANAGER)
 
 set_target_properties(Crymium.UnitTests PROPERTIES CXX_STANDARD 17)
 
-target_compile_options(Crymium.UnitTests PRIVATE "/MTd")
+target_compile_options(Crymium.UnitTests PRIVATE "/MD")
 
 target_link_libraries(Crymium.UnitTests PUBLIC Crymium)
 target_link_libraries(Crymium.UnitTests PUBLIC gmock)

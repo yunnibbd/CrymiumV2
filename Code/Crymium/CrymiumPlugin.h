@@ -16,6 +16,9 @@ namespace Crymium
 		
 		CRYGENERATE_SINGLETONCLASS_GUID(Crymium::CrymiumPlugin, "Crymium", "{E2899FF1-A355-4379-8C6E-37474C7EA35C}"_cry_guid)
 	
+		PLUGIN_FLOWNODE_REGISTER
+		PLUGIN_FLOWNODE_UNREGISTER
+
 		virtual ~CrymiumPlugin();
 		
 		bool Initialize(SSystemGlobalEnvironment& env, const SSystemInitParams& initParams) override;

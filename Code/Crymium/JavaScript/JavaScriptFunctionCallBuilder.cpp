@@ -1,7 +1,8 @@
 #include "JavaScriptFunctionCallBuilder.h"
 
-std::string JavaScriptFunctionCallBuilder::Build(std::string functionName, const std::vector<std::string>& parameters)
+std::string JavaScriptFunctionCallBuilder::Build(const char* functionNameIn, const std::vector<std::string>& parameters)
 {
+	std::string functionName = functionNameIn;
 	auto javaScriptString = functionName + "(";
 
 	auto parameterCount = parameters.size();

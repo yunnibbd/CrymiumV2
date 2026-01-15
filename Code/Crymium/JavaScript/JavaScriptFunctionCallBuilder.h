@@ -9,7 +9,7 @@ namespace Crymium::JavaScript
 	public:
 		__declspec(dllexport) JavaScriptFunctionCallBuilder() = default;
 
-		__declspec(dllexport) std::string Build(std::string functionName, const std::vector<std::string>& parameters) override;
+		__declspec(dllexport) std::string Build(const char* functionNameIn, const std::vector<std::string>& parameters) override;
 	};
 }
 

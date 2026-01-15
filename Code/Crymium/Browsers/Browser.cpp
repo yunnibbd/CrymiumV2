@@ -50,7 +50,10 @@ void Browser::SendInputEvent(const SInputEvent& inputEvent)
 
 void Browser::GoTo(std::string url)
 {
-    _browser->GetMainFrame()->LoadURL(url);
+    if (_browser)
+    {
+        _browser->GetMainFrame()->LoadURL(url);
+    }
 }
 
 void Browser::ExecuteJavaScriptString(const char* javaScript)

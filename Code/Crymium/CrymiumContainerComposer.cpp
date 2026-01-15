@@ -44,7 +44,7 @@
 #include "Crymium/Uis/CryUiDirectoryProvider.h"
 #include "Crymium/Uis/UiDirectoryProvider.h"
 
-std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string uiDirectory)
+std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(const char* uiDirectory)
 {
 	auto container = std::make_unique<CrymiumContainer>();
 
@@ -207,7 +207,7 @@ std::unique_ptr<ICrymiumContainer> CrymiumContainerComposer::Compose(std::string
 		container->GetCryInitialiser()
 		));
 
-	if (uiDirectory.empty())
+	if (uiDirectory == nullptr || uiDirectory[0] == '\0')
 	{
 		container->Register(std::make_unique<CryUiDirectoryProvider>());
 	}

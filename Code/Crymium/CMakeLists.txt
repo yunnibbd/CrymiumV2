@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.14)
-set(CRYENGINE_DIR "C:/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6" CACHE STRING "CRYENGINE root directory.")
+set(CRYENGINE_DIR "E:/code/Cry/CRYENGINE_Source-5.7.1" CACHE STRING "CRYENGINE root directory.")
 set(TOOLS_CMAKE_DIR "${CRYENGINE_DIR}/Tools/CMake")
 
 set(PROJECT_BUILD 1)
@@ -252,6 +252,7 @@ add_sources("uber.cpp"
         "CrymiumPlugin.cpp"
 		"StdAfx.cpp"
         "CrymiumPlugin.h"
+        "CrymiumPluginEnv.h"
 		"StdAfx.h"
         "CrymiumContainer.cpp"
         "CrymiumContainerComposer.cpp"
@@ -259,6 +260,12 @@ add_sources("uber.cpp"
         "CrymiumContainer.h"
         "CrymiumContainerComposer.h"
         "CrymiumInitialiser.h"
+)
+
+add_sources("FlowNodes_uber.cpp"
+    PROJECTS Crymium
+    SOURCE_GROUP "FlowNodes"
+        "FlowNodes/FlowNodes.cpp"
 )
 
 end_sources()

@@ -20,6 +20,7 @@ namespace Crymium
 	private:
 		ICrymiumCefInitialiser* _crymiumCefInitialiser;
 		ICryInitialiser* _cryInitialiser;
+		bool _isInit;
 	};
 }
 

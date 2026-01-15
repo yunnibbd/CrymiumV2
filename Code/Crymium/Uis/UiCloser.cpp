@@ -12,4 +12,5 @@ _browser(browser)
 void UiCloser::Close()
 {
 	_browser->GoTo("None");
+	mEnv->hasShowUI = false;
 }
